@@ -1,5 +1,7 @@
 import { ponder } from "ponder:registry";
-import { orders } from "../ponder.schema";
+// import { orders } from "ponder:schema";
+import { orders } from "../ponder.schema";  // Adjust the relative path if needed
+
 ponder.on("OrderBook:OrderPlaced", async ({ event, context }) => {
   try {
     const { args } = event;
@@ -19,3 +21,4 @@ ponder.on("OrderBook:OrderPlaced", async ({ event, context }) => {
     console.error("Error while handling OrderPlaced event:", error);
   }
 });
+
